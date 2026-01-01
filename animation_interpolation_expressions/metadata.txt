@@ -1,0 +1,19 @@
+[general]
+name=Animation interpolation and easing expressions
+description=Minimal plugin
+about=About this minimal plugin
+version=1.0
+qgisMinimumVersion=3.16
+qgisMaximumVersion=4.99
+author=Valentin Buira
+email=valentin.buira@gmail.com
+repository=URL to the code repository
+supportsQt6=True
+
+
+tags=animation,easing
+experimental=False
+
+
+
+

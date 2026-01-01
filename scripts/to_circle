@@ -1,0 +1,85 @@
+from qgis.core import *
+from qgis.gui import *
+from qgis.PyQt.QtGui import QVector2D
+
+from statistics import mean
+
+def lerp(a: float, b: float, t: float) -> float:
+    """Linear interpolate on the scale given by a to b, using t as the point on that scale.
+    Examples
+    --------
+        50 == lerp(0, 100, 0.5)
+        4.2 == lerp(1, 5, 0.8)
+    """
+    return (1 - t) * a + t * b
+
+@qgsfunction(group='Custom', referenced_columns=[])
+def to_circle(geometry: QgsGeometry, t: float=1):
+    """
+    Calculates the sum of the two parameters value1 and value2.
+    <h2>Example usage:</h2>
+    <ul>
+      <li>my_sum(5, 8) -> 13</li>
+      <li>my_sum("field1", "field2") -> 42</li>
+    </ul>
+    """
+    centroid = geometry.pointOnSurface()
+    
+    vertices = [v for v in geometry.vertices()]
+    vertices_as_geom = [QgsGeometry(v) for v in geometry.vertices()]
+    #return vertices
+    
+    
+    distance_centroid_vertex = [v.distance(centroid) for v in vertices_as_geom]
+    #return distance_centroid_vertex
+    
+    average = goal = mean(distance_centroid_vertex)
+    
+    
+    vectors = [QVector2D( v.toQPointF() - centroid.asQPointF()) for v in vertices]
+    
+    
+    vectors = [vector.normalized() * lerp(original_dist, goal, t) for vector, original_dist in zip(vectors, distance_centroid_vertex)]
+    end_vertices = [QgsPointXY(centroid.asQPointF() + final_vector.toPointF()) for final_vector in vectors]
+    
+    #polygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 2), QgsPointXY(5, 2), QgsPointXY(5, 10), QgsPointXY(1, 2)]])
+    
+    #circle = QgsCircle.fromCenterPoint( QgsPoint(centroid.asQPointF()) ,  QgsPoint(end_vertices[0]) )
+    
+    #return QgsGeometry(circle.toCircularString(True))
+    
+    polygon = QgsGeometry.fromPolygonXY([end_vertices])
+    return polygon
+    
+    
+@qgsfunction(group='Custom', referenced_columns=[])
+def to_circle_optimized(geometry: QgsGeometry, t: float, centroid, goal):
+    """
+    Calculates the sum of the two parameters value1 and value2.
+    <h2>Example usage:</h2>
+    <ul>
+      <li>my_sum(5, 8) -> 13</li>
+      <li>my_sum("field1", "field2") -> 42</li>
+    </ul>
+    """
+    
+    vertices_as_geom = [QgsGeometry(v) for v in geometry.vertices()]
+    distance_centroid_vertex = [v.distance(centroid) for v in vertices_as_geom]
+    #return distance_centroid_vertex
+    
+    vertices = [v for v in geometry.vertices()]
+    
+
+    vectors = [QVector2D( v.toQPointF() - centroid.asQPointF()) for v in vertices]
+    vectors = [vector.normalized() for vector in vectors]
+    #return QgsGeometry.fromPolygonXY([[QgsPointXY(vector.toPointF()) for vector in vectors]])
+    
+    #vectors = [QVector2D(v.toQPointF()) for v in vectors.vertices()]
+    vectors = [vector * lerp(original_dist, goal, t) for vector, original_dist in zip(vectors, distance_centroid_vertex)]
+    end_vertices = [QgsPointXY(centroid.asQPointF() + final_vector.toPointF()) for final_vector in vectors]
+
+    polygon = QgsGeometry.fromPolygonXY([end_vertices])
+    return polygon
+    
+    
+    
