@@ -14,7 +14,7 @@ def lerp(a: float, b: float, t: float) -> float:
     return (1 - t) * a + t * b
 
 @qgsfunction(group='Custom', referenced_columns=[])
-def to_circle(geometry: QgsGeometry, t: float=1):
+def to_circle(geometry: QgsGeometry, t: float=1, goal:float=None):
     """
     Calculates the sum of the two parameters value1 and value2.
     <h2>Example usage:</h2>
@@ -27,26 +27,18 @@ def to_circle(geometry: QgsGeometry, t: float=1):
     
     vertices = [v for v in geometry.vertices()]
     vertices_as_geom = [QgsGeometry(v) for v in geometry.vertices()]
-    #return vertices
-    
+  
     
     distance_centroid_vertex = [v.distance(centroid) for v in vertices_as_geom]
-    #return distance_centroid_vertex
     
-    average = goal = mean(distance_centroid_vertex)
-    
+    if goal == None:
+      goal = mean(distance_centroid_vertex)
     
     vectors = [QVector2D( v.toQPointF() - centroid.asQPointF()) for v in vertices]
     
     
     vectors = [vector.normalized() * lerp(original_dist, goal, t) for vector, original_dist in zip(vectors, distance_centroid_vertex)]
     end_vertices = [QgsPointXY(centroid.asQPointF() + final_vector.toPointF()) for final_vector in vectors]
-    
-    #polygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 2), QgsPointXY(5, 2), QgsPointXY(5, 10), QgsPointXY(1, 2)]])
-    
-    #circle = QgsCircle.fromCenterPoint( QgsPoint(centroid.asQPointF()) ,  QgsPoint(end_vertices[0]) )
-    
-    #return QgsGeometry(circle.toCircularString(True))
     
     polygon = QgsGeometry.fromPolygonXY([end_vertices])
     return polygon

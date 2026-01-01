@@ -1,5 +1,5 @@
 #-----------------------------------------------------------
-# Copyright (C) 2015 Martin Dobias
+# Copyright (C) 2025 Valentin Buira
 #-----------------------------------------------------------
 # Licensed under the terms of GNU GPL 2
 #
@@ -9,9 +9,13 @@
 # (at your option) any later version.
 #---------------------------------------------------------------------
 
+from qgis.core import QgsExpression, qgsfunction, QgsGeometry, QgsPointXY
+
 from qgis.PyQt.QtWidgets import QAction, QMessageBox
 from qgis.PyQt.QtCore import QEasingCurve
-from qgis.core import QgsExpression, qgsfunction
+from qgis.PyQt.QtGui import QVector2D
+
+from statistics import mean
 
 # from .easing import ease_in_circ as _ease_in_circ
 from . import easing
@@ -138,6 +142,36 @@ def remap(value, start1, stop1, start2, stop2):
     t = easing.inverse_lerp(start1, stop1, value)
     #return t
     return start2 + (stop2 - start2) * t
+
+@qgsfunction(group='Custom', referenced_columns=[])
+def to_circle(geometry: QgsGeometry, t: float=1, goal:float=None):
+    """
+    Calculates the sum of the two parameters value1 and value2.
+    <h2>Example usage:</h2>
+    <ul>
+      <li>my_sum(5, 8) -> 13</li>
+      <li>my_sum("field1", "field2") -> 42</li>
+    </ul>
+    """
+    centroid = geometry.pointOnSurface()
+    
+    vertices = [v for v in geometry.vertices()]
+    vertices_as_geom = [QgsGeometry(v) for v in geometry.vertices()]
+    
+    distance_centroid_vertex = [v.distance(centroid) for v in vertices_as_geom]
+    
+    # TODO confirms optional argument works on older release
+    if goal == None:
+        goal = mean(distance_centroid_vertex)
+    
+    vectors = [QVector2D( v.toQPointF() - centroid.asQPointF()) for v in vertices]
+    
+    
+    vectors = [vector.normalized() * easing.lerp_unclamped(original_dist, goal, t) for vector, original_dist in zip(vectors, distance_centroid_vertex)]
+    end_vertices = [QgsPointXY(centroid.asQPointF() + final_vector.toPointF()) for final_vector in vectors]
+    
+    polygon = QgsGeometry.fromPolygonXY([end_vertices])
+    return polygon
 
 class MinimalPlugin:
     def __init__(self, iface):
