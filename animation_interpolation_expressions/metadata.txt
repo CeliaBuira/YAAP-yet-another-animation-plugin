@@ -5,8 +5,8 @@ about=About this minimal plugin
 version=1.0
 qgisMinimumVersion=3.16
 qgisMaximumVersion=4.99
-author=Valentin Buira
-email=valentin.buira@gmail.com
+author=Celia Buira
+email=celia.buira@gmail.com
 repository=URL to the code repository
 supportsQt6=True
 

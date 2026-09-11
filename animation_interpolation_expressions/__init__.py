@@ -1,5 +1,5 @@
 #-----------------------------------------------------------
-# Copyright (C) 2025 Valentin Buira
+# Copyright (C) 2025 Celia Buira
 #-----------------------------------------------------------
 # Licensed under the terms of GNU GPL 2
 #
