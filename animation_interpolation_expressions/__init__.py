@@ -195,5 +195,17 @@ class MinimalPlugin:
         QgsExpression.registerFunction(inverse_lerp)
 
     def unloadExpressions(self):
+        QgsExpression.unregisterFunction("lerp")
+        QgsExpression.unregisterFunction("lerp_unclamped")
         QgsExpression.unregisterFunction("inverse_lerp")
+        QgsExpression.unregisterFunction("inverse_lerp_unclamped")
+        QgsExpression.unregisterFunction("remap")
+        QgsExpression.unregisterFunction("ease_in_sin")
+        QgsExpression.unregisterFunction("ease_out_sin")
+        QgsExpression.unregisterFunction("ease_in_out_sin")
+
+        QgsExpression.unregisterFunction("ease_out_quad")
+        QgsExpression.unregisterFunction("ease_in_circ")
+
+        
 

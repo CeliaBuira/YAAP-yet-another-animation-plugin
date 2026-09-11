@@ -159,9 +159,9 @@ def foo():
 def foo(t, parent):
     return t
 
-def baraaa(t, parent):
+def bar(t, parent):
     return t 
-baraaa = qgsfunction(args="auto", group="custom")(baraaa)
+bar = qgsfunction(args="auto", group="custom")(bar)
 """
 
 
