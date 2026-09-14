@@ -10,6 +10,9 @@ email=celia.buira@gmail.com
 repository=URL to the code repository
 supportsQt6=True
 
+icon=icon.png
+
+
 
 tags=animation,easing
 experimental=False

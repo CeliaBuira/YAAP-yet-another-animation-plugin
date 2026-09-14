@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="250"
+   height="250"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8">
+    <linearGradient
+       id="easingGradient-0"
+       gradientTransform="matrix(7.0761691,0,0,7.1287744,7.4909396,7.6321941)"
+       x1="-2.0074203"
+       y1="-1.992607"
+       x2="34.126144"
+       y2="-1.992607"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.0%"
+         stop-color="#fde725"
+         id="stop1-9" />
+      <stop
+         offset="0.304%"
+         stop-color="#fde725"
+         id="stop2-4" />
+      <stop
+         offset="2.514%"
+         stop-color="#efe51c"
+         id="stop3-8" />
+      <stop
+         offset="18.525%"
+         stop-color="#84d44b"
+         id="stop4-8" />
+      <stop
+         offset="81.466%"
+         stop-color="#423f85"
+         id="stop5-2" />
+      <stop
+         offset="97.485%"
+         stop-color="#460a5d"
+         id="stop6-4" />
+      <stop
+         offset="99.696%"
+         stop-color="#440154"
+         id="stop7-5" />
+      <stop
+         offset="100.0%"
+         stop-color="#440154"
+         id="stop8-5" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.6852328"
+     inkscape:cx="162.36953"
+     inkscape:cy="126.80465"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <linearGradient
+     id="easingGradient"
+     x1="-0.60000002"
+     y1="-0.60000002"
+     x2="32.599998"
+     y2="-0.60000002"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(6.6733277,0,0,6.6733277,17.521926,20.642435)">
+    <stop
+       offset="0.0%"
+       stop-color="#fde725"
+       id="stop1" />
+    <stop
+       offset="4.082%"
+       stop-color="#e5e419"
+       id="stop2" />
+    <stop
+       offset="16.327%"
+       stop-color="#93d741"
+       id="stop3" />
+    <stop
+       offset="36.735%"
+       stop-color="#29af7f"
+       id="stop4" />
+    <stop
+       offset="63.265%"
+       stop-color="#2d718e"
+       id="stop5" />
+    <stop
+       offset="83.673%"
+       stop-color="#453882"
+       id="stop6" />
+    <stop
+       offset="95.918%"
+       stop-color="#471063"
+       id="stop7" />
+    <stop
+       offset="100.0%"
+       stop-color="#440154"
+       id="stop8" />
+  </linearGradient>
+  <path
+     d="M 17.521926,234.18893 C 120.02424,225.64707 128.5661,29.184295 231.06841,20.642434"
+     fill="none"
+     stroke="url(#easingGradient)"
+     stroke-width="4"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path8"
+     style="stroke:url(#easingGradient);stroke-width:30;stroke-dasharray:none" />
+</svg>
