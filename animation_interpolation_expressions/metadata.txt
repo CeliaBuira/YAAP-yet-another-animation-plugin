@@ -12,9 +12,7 @@ supportsQt6=True
 
 icon=icon.png
 
-
-
-tags=animation,easing
+tags=animation,easing,expression,field-calculator
 experimental=False
 
 
