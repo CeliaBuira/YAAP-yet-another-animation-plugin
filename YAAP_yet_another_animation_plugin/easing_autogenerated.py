@@ -5,53 +5,53 @@ from qgis.PyQt.QtCore import QEasingCurve
 from qgis.utils import qgsfunction
 
 registered_easing_functions = {
-    'in_quad'
-    'out_quad'
-    'in_out_quad'
-    'out_in_quad'
-    'in_cubic'
-    'out_cubic'
-    'in_out_cubic'
-    'out_in_cubic'
-    'in_quart'
-    'out_quart'
-    'in_out_quart'
-    'out_in_quart'
-    'in_quint'
-    'out_quint'
-    'in_out_quint'
-    'out_in_quint'
-    'in_sine'
-    'out_sine'
-    'in_out_sine'
-    'out_in_sine'
-    'in_expo'
-    'out_expo'
-    'in_out_expo'
-    'out_in_expo'
-    'in_circ'
-    'out_circ'
-    'in_out_circ'
-    'out_in_circ'
-    'in_elastic'
-    'out_elastic'
-    'in_out_elastic'
-    'out_in_elastic'
-    'in_back'
-    'out_back'
-    'in_out_back'
-    'out_in_back'
-    'in_bounce'
-    'out_bounce'
-    'in_out_bounce'
-    'out_in_bounce'
+    'ease_in_quad'
+    'ease_out_quad'
+    'ease_in_out_quad'
+    'ease_out_in_quad'
+    'ease_in_cubic'
+    'ease_out_cubic'
+    'ease_in_out_cubic'
+    'ease_out_in_cubic'
+    'ease_in_quart'
+    'ease_out_quart'
+    'ease_in_out_quart'
+    'ease_out_in_quart'
+    'ease_in_quint'
+    'ease_out_quint'
+    'ease_in_out_quint'
+    'ease_out_in_quint'
+    'ease_in_sine'
+    'ease_out_sine'
+    'ease_in_out_sine'
+    'ease_out_in_sine'
+    'ease_in_expo'
+    'ease_out_expo'
+    'ease_in_out_expo'
+    'ease_out_in_expo'
+    'ease_in_circ'
+    'ease_out_circ'
+    'ease_in_out_circ'
+    'ease_out_in_circ'
+    'ease_in_elastic'
+    'ease_out_elastic'
+    'ease_in_out_elastic'
+    'ease_out_in_elastic'
+    'ease_in_back'
+    'ease_out_back'
+    'ease_in_out_back'
+    'ease_out_in_back'
+    'ease_in_bounce'
+    'ease_out_bounce'
+    'ease_in_out_bounce'
+    'ease_out_in_bounce'
 }
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_quad(t, parent):
+def ease_in_quad(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_quad</b>(  <i> t </i>)</p>
+    <p><b>ease_in_quad</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -60,19 +60,19 @@ def in_quad(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_quad</b>( 0.25 )  &rarr; 0.0625</li>
-      <li><b>in_quad</b>( 0.5 )  &rarr; 0.25</li>
-      <li><b>in_quad</b>( 0.75 )  &rarr; 0.5625</li>
+      <li><b>ease_in_quad</b>( 0.25 )  &rarr; 0.0625</li>
+      <li><b>ease_in_quad</b>( 0.5 )  &rarr; 0.25</li>
+      <li><b>ease_in_quad</b>( 0.75 )  &rarr; 0.5625</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InQuad)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_quad(t, parent):
+def ease_out_quad(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_quad</b>(  <i> t </i>)</p>
+    <p><b>ease_out_quad</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -81,19 +81,19 @@ def out_quad(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_quad</b>( 0.25 )  &rarr; 0.4375</li>
-      <li><b>out_quad</b>( 0.5 )  &rarr; 0.75</li>
-      <li><b>out_quad</b>( 0.75 )  &rarr; 0.9375</li>
+      <li><b>ease_out_quad</b>( 0.25 )  &rarr; 0.4375</li>
+      <li><b>ease_out_quad</b>( 0.5 )  &rarr; 0.75</li>
+      <li><b>ease_out_quad</b>( 0.75 )  &rarr; 0.9375</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutQuad)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_quad(t, parent):
+def ease_in_out_quad(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_quad</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_quad</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -102,19 +102,19 @@ def in_out_quad(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_quad</b>( 0.25 )  &rarr; 0.125</li>
-      <li><b>in_out_quad</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_quad</b>( 0.75 )  &rarr; 0.875</li>
+      <li><b>ease_in_out_quad</b>( 0.25 )  &rarr; 0.125</li>
+      <li><b>ease_in_out_quad</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_quad</b>( 0.75 )  &rarr; 0.875</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutQuad)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_quad(t, parent):
+def ease_out_in_quad(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_quad</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_quad</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -123,19 +123,19 @@ def out_in_quad(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_quad</b>( 0.25 )  &rarr; 0.375</li>
-      <li><b>out_in_quad</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_quad</b>( 0.75 )  &rarr; 0.625</li>
+      <li><b>ease_out_in_quad</b>( 0.25 )  &rarr; 0.375</li>
+      <li><b>ease_out_in_quad</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_quad</b>( 0.75 )  &rarr; 0.625</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInQuad)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_cubic(t, parent):
+def ease_in_cubic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_cubic</b>(  <i> t </i>)</p>
+    <p><b>ease_in_cubic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -144,19 +144,19 @@ def in_cubic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_cubic</b>( 0.25 )  &rarr; 0.42188…</li>
-      <li><b>in_cubic</b>( 0.5 )  &rarr; 0.125</li>
-      <li><b>in_cubic</b>( 0.75 )  &rarr; 0.42188…</li>
+      <li><b>ease_in_cubic</b>( 0.25 )  &rarr; 0.01562…</li>
+      <li><b>ease_in_cubic</b>( 0.5 )  &rarr; 0.125</li>
+      <li><b>ease_in_cubic</b>( 0.75 )  &rarr; 0.42188…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InCubic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_cubic(t, parent):
+def ease_out_cubic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_cubic</b>(  <i> t </i>)</p>
+    <p><b>ease_out_cubic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -165,19 +165,19 @@ def out_cubic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_cubic</b>( 0.25 )  &rarr; 0.98438…</li>
-      <li><b>out_cubic</b>( 0.5 )  &rarr; 0.875</li>
-      <li><b>out_cubic</b>( 0.75 )  &rarr; 0.98438…</li>
+      <li><b>ease_out_cubic</b>( 0.25 )  &rarr; 0.57812…</li>
+      <li><b>ease_out_cubic</b>( 0.5 )  &rarr; 0.875</li>
+      <li><b>ease_out_cubic</b>( 0.75 )  &rarr; 0.98438…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutCubic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_cubic(t, parent):
+def ease_in_out_cubic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_cubic</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_cubic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -186,19 +186,19 @@ def in_out_cubic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_cubic</b>( 0.25 )  &rarr; 0.0625</li>
-      <li><b>in_out_cubic</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_cubic</b>( 0.75 )  &rarr; 0.9375</li>
+      <li><b>ease_in_out_cubic</b>( 0.25 )  &rarr; 0.0625</li>
+      <li><b>ease_in_out_cubic</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_cubic</b>( 0.75 )  &rarr; 0.9375</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutCubic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_cubic(t, parent):
+def ease_out_in_cubic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_cubic</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_cubic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -207,19 +207,19 @@ def out_in_cubic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_cubic</b>( 0.25 )  &rarr; 0.4375</li>
-      <li><b>out_in_cubic</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_cubic</b>( 0.75 )  &rarr; 0.5625</li>
+      <li><b>ease_out_in_cubic</b>( 0.25 )  &rarr; 0.4375</li>
+      <li><b>ease_out_in_cubic</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_cubic</b>( 0.75 )  &rarr; 0.5625</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInCubic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_quart(t, parent):
+def ease_in_quart(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_quart</b>(  <i> t </i>)</p>
+    <p><b>ease_in_quart</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -228,19 +228,19 @@ def in_quart(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_quart</b>( 0.25 )  &rarr; 0.31641…</li>
-      <li><b>in_quart</b>( 0.5 )  &rarr; 0.0625</li>
-      <li><b>in_quart</b>( 0.75 )  &rarr; 0.31641…</li>
+      <li><b>ease_in_quart</b>( 0.25 )  &rarr; 0.00391…</li>
+      <li><b>ease_in_quart</b>( 0.5 )  &rarr; 0.0625</li>
+      <li><b>ease_in_quart</b>( 0.75 )  &rarr; 0.31641…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InQuart)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_quart(t, parent):
+def ease_out_quart(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_quart</b>(  <i> t </i>)</p>
+    <p><b>ease_out_quart</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -249,19 +249,19 @@ def out_quart(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_quart</b>( 0.25 )  &rarr; 0.99609…</li>
-      <li><b>out_quart</b>( 0.5 )  &rarr; 0.9375</li>
-      <li><b>out_quart</b>( 0.75 )  &rarr; 0.99609…</li>
+      <li><b>ease_out_quart</b>( 0.25 )  &rarr; 0.68359…</li>
+      <li><b>ease_out_quart</b>( 0.5 )  &rarr; 0.9375</li>
+      <li><b>ease_out_quart</b>( 0.75 )  &rarr; 0.99609…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutQuart)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_quart(t, parent):
+def ease_in_out_quart(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_quart</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_quart</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -270,19 +270,19 @@ def in_out_quart(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_quart</b>( 0.25 )  &rarr; 0.03125</li>
-      <li><b>in_out_quart</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_quart</b>( 0.75 )  &rarr; 0.96875</li>
+      <li><b>ease_in_out_quart</b>( 0.25 )  &rarr; 0.03125</li>
+      <li><b>ease_in_out_quart</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_quart</b>( 0.75 )  &rarr; 0.96875</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutQuart)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_quart(t, parent):
+def ease_out_in_quart(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_quart</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_quart</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -291,19 +291,19 @@ def out_in_quart(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_quart</b>( 0.25 )  &rarr; 0.46875</li>
-      <li><b>out_in_quart</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_quart</b>( 0.75 )  &rarr; 0.53125</li>
+      <li><b>ease_out_in_quart</b>( 0.25 )  &rarr; 0.46875</li>
+      <li><b>ease_out_in_quart</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_quart</b>( 0.75 )  &rarr; 0.53125</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInQuart)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_quint(t, parent):
+def ease_in_quint(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_quint</b>(  <i> t </i>)</p>
+    <p><b>ease_in_quint</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -312,19 +312,19 @@ def in_quint(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_quint</b>( 0.25 )  &rarr; 0.2373…</li>
-      <li><b>in_quint</b>( 0.5 )  &rarr; 0.03125</li>
-      <li><b>in_quint</b>( 0.75 )  &rarr; 0.2373…</li>
+      <li><b>ease_in_quint</b>( 0.25 )  &rarr; 0.00098…</li>
+      <li><b>ease_in_quint</b>( 0.5 )  &rarr; 0.03125</li>
+      <li><b>ease_in_quint</b>( 0.75 )  &rarr; 0.2373…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InQuint)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_quint(t, parent):
+def ease_out_quint(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_quint</b>(  <i> t </i>)</p>
+    <p><b>ease_out_quint</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -333,19 +333,19 @@ def out_quint(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_quint</b>( 0.25 )  &rarr; 0.99902…</li>
-      <li><b>out_quint</b>( 0.5 )  &rarr; 0.96875</li>
-      <li><b>out_quint</b>( 0.75 )  &rarr; 0.99902…</li>
+      <li><b>ease_out_quint</b>( 0.25 )  &rarr; 0.7627…</li>
+      <li><b>ease_out_quint</b>( 0.5 )  &rarr; 0.96875</li>
+      <li><b>ease_out_quint</b>( 0.75 )  &rarr; 0.99902…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutQuint)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_quint(t, parent):
+def ease_in_out_quint(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_quint</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_quint</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -354,19 +354,19 @@ def in_out_quint(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_quint</b>( 0.25 )  &rarr; 0.98438…</li>
-      <li><b>in_out_quint</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_quint</b>( 0.75 )  &rarr; 0.98438…</li>
+      <li><b>ease_in_out_quint</b>( 0.25 )  &rarr; 0.01562…</li>
+      <li><b>ease_in_out_quint</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_quint</b>( 0.75 )  &rarr; 0.98438…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutQuint)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_quint(t, parent):
+def ease_out_in_quint(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_quint</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_quint</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -375,19 +375,19 @@ def out_in_quint(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_quint</b>( 0.25 )  &rarr; 0.51562…</li>
-      <li><b>out_in_quint</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_quint</b>( 0.75 )  &rarr; 0.51562…</li>
+      <li><b>ease_out_in_quint</b>( 0.25 )  &rarr; 0.48438…</li>
+      <li><b>ease_out_in_quint</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_quint</b>( 0.75 )  &rarr; 0.51562…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInQuint)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_sine(t, parent):
+def ease_in_sine(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_sine</b>(  <i> t </i>)</p>
+    <p><b>ease_in_sine</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -396,19 +396,19 @@ def in_sine(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_sine</b>( 0.25 )  &rarr; 0.61732…</li>
-      <li><b>in_sine</b>( 0.5 )  &rarr; 0.61732…</li>
-      <li><b>in_sine</b>( 0.75 )  &rarr; 0.61732…</li>
+      <li><b>ease_in_sine</b>( 0.25 )  &rarr; 0.07612…</li>
+      <li><b>ease_in_sine</b>( 0.5 )  &rarr; 0.29289…</li>
+      <li><b>ease_in_sine</b>( 0.75 )  &rarr; 0.61732…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InSine)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_sine(t, parent):
+def ease_out_sine(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_sine</b>(  <i> t </i>)</p>
+    <p><b>ease_out_sine</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -417,19 +417,19 @@ def out_sine(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_sine</b>( 0.25 )  &rarr; 0.92388…</li>
-      <li><b>out_sine</b>( 0.5 )  &rarr; 0.92388…</li>
-      <li><b>out_sine</b>( 0.75 )  &rarr; 0.92388…</li>
+      <li><b>ease_out_sine</b>( 0.25 )  &rarr; 0.38268…</li>
+      <li><b>ease_out_sine</b>( 0.5 )  &rarr; 0.70711…</li>
+      <li><b>ease_out_sine</b>( 0.75 )  &rarr; 0.92388…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutSine)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_sine(t, parent):
+def ease_in_out_sine(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_sine</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_sine</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -438,19 +438,19 @@ def in_out_sine(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_sine</b>( 0.25 )  &rarr; 0.85355…</li>
-      <li><b>in_out_sine</b>( 0.5 )  &rarr; 0.85355…</li>
-      <li><b>in_out_sine</b>( 0.75 )  &rarr; 0.85355…</li>
+      <li><b>ease_in_out_sine</b>( 0.25 )  &rarr; 0.14645…</li>
+      <li><b>ease_in_out_sine</b>( 0.5 )  &rarr; 0.5…</li>
+      <li><b>ease_in_out_sine</b>( 0.75 )  &rarr; 0.85355…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutSine)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_sine(t, parent):
+def ease_out_in_sine(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_sine</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_sine</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -459,19 +459,19 @@ def out_in_sine(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_sine</b>( 0.25 )  &rarr; 0.64645…</li>
-      <li><b>out_in_sine</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_sine</b>( 0.75 )  &rarr; 0.64645…</li>
+      <li><b>ease_out_in_sine</b>( 0.25 )  &rarr; 0.35355…</li>
+      <li><b>ease_out_in_sine</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_sine</b>( 0.75 )  &rarr; 0.64645…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInSine)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_expo(t, parent):
+def ease_in_expo(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_expo</b>(  <i> t </i>)</p>
+    <p><b>ease_in_expo</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -480,19 +480,19 @@ def in_expo(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_expo</b>( 0.25 )  &rarr; 0.17578…</li>
-      <li><b>in_expo</b>( 0.5 )  &rarr; 0.03025</li>
-      <li><b>in_expo</b>( 0.75 )  &rarr; 0.17578…</li>
+      <li><b>ease_in_expo</b>( 0.25 )  &rarr; 0.00452…</li>
+      <li><b>ease_in_expo</b>( 0.5 )  &rarr; 0.03025</li>
+      <li><b>ease_in_expo</b>( 0.75 )  &rarr; 0.17578…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InExpo)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_expo(t, parent):
+def ease_out_expo(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_expo</b>(  <i> t </i>)</p>
+    <p><b>ease_out_expo</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -501,19 +501,19 @@ def out_expo(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_expo</b>( 0.25 )  &rarr; 0.99547…</li>
-      <li><b>out_expo</b>( 0.5 )  &rarr; 0.99547…</li>
-      <li><b>out_expo</b>( 0.75 )  &rarr; 0.99547…</li>
+      <li><b>ease_out_expo</b>( 0.25 )  &rarr; 0.82405…</li>
+      <li><b>ease_out_expo</b>( 0.5 )  &rarr; 0.96972…</li>
+      <li><b>ease_out_expo</b>( 0.75 )  &rarr; 0.99547…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutExpo)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_expo(t, parent):
+def ease_in_out_expo(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_expo</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_expo</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -522,19 +522,19 @@ def in_out_expo(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_expo</b>( 0.25 )  &rarr; 0.98487…</li>
-      <li><b>in_out_expo</b>( 0.5 )  &rarr; 0.50025</li>
-      <li><b>in_out_expo</b>( 0.75 )  &rarr; 0.98487…</li>
+      <li><b>ease_in_out_expo</b>( 0.25 )  &rarr; 0.01512…</li>
+      <li><b>ease_in_out_expo</b>( 0.5 )  &rarr; 0.50025</li>
+      <li><b>ease_in_out_expo</b>( 0.75 )  &rarr; 0.98487…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutExpo)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_expo(t, parent):
+def ease_out_in_expo(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_expo</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_expo</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -543,19 +543,19 @@ def out_in_expo(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_expo</b>( 0.25 )  &rarr; 0.51513…</li>
-      <li><b>out_in_expo</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_expo</b>( 0.75 )  &rarr; 0.51513…</li>
+      <li><b>ease_out_in_expo</b>( 0.25 )  &rarr; 0.48486…</li>
+      <li><b>ease_out_in_expo</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_expo</b>( 0.75 )  &rarr; 0.51513…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInExpo)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_circ(t, parent):
+def ease_in_circ(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_circ</b>(  <i> t </i>)</p>
+    <p><b>ease_in_circ</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -564,19 +564,19 @@ def in_circ(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_circ</b>( 0.25 )  &rarr; 0.33856…</li>
-      <li><b>in_circ</b>( 0.5 )  &rarr; 0.33856…</li>
-      <li><b>in_circ</b>( 0.75 )  &rarr; 0.33856…</li>
+      <li><b>ease_in_circ</b>( 0.25 )  &rarr; 0.03175…</li>
+      <li><b>ease_in_circ</b>( 0.5 )  &rarr; 0.13397…</li>
+      <li><b>ease_in_circ</b>( 0.75 )  &rarr; 0.33856…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InCirc)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_circ(t, parent):
+def ease_out_circ(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_circ</b>(  <i> t </i>)</p>
+    <p><b>ease_out_circ</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -585,19 +585,19 @@ def out_circ(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_circ</b>( 0.25 )  &rarr; 0.96825…</li>
-      <li><b>out_circ</b>( 0.5 )  &rarr; 0.96825…</li>
-      <li><b>out_circ</b>( 0.75 )  &rarr; 0.96825…</li>
+      <li><b>ease_out_circ</b>( 0.25 )  &rarr; 0.66144…</li>
+      <li><b>ease_out_circ</b>( 0.5 )  &rarr; 0.86603…</li>
+      <li><b>ease_out_circ</b>( 0.75 )  &rarr; 0.96825…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutCirc)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_circ(t, parent):
+def ease_in_out_circ(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_circ</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_circ</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -606,19 +606,19 @@ def in_out_circ(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_circ</b>( 0.25 )  &rarr; 0.93301…</li>
-      <li><b>in_out_circ</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_circ</b>( 0.75 )  &rarr; 0.93301…</li>
+      <li><b>ease_in_out_circ</b>( 0.25 )  &rarr; 0.06699…</li>
+      <li><b>ease_in_out_circ</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_circ</b>( 0.75 )  &rarr; 0.93301…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutCirc)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_circ(t, parent):
+def ease_out_in_circ(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_circ</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_circ</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -627,19 +627,19 @@ def out_in_circ(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_circ</b>( 0.25 )  &rarr; 0.56699…</li>
-      <li><b>out_in_circ</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_circ</b>( 0.75 )  &rarr; 0.56699…</li>
+      <li><b>ease_out_in_circ</b>( 0.25 )  &rarr; 0.43301…</li>
+      <li><b>ease_out_in_circ</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_circ</b>( 0.75 )  &rarr; 0.56699…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInCirc)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_elastic(t, parent):
+def ease_in_elastic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_elastic</b>(  <i> t </i>)</p>
+    <p><b>ease_in_elastic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -648,19 +648,19 @@ def in_elastic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_elastic</b>( 0.25 )  &rarr; 0.08839…</li>
-      <li><b>in_elastic</b>( 0.5 )  &rarr; 0.08839…</li>
-      <li><b>in_elastic</b>( 0.75 )  &rarr; 0.08839…</li>
+      <li><b>ease_in_elastic</b>( 0.25 )  &rarr; -0.00552…</li>
+      <li><b>ease_in_elastic</b>( 0.5 )  &rarr; -0.01563…</li>
+      <li><b>ease_in_elastic</b>( 0.75 )  &rarr; 0.08839…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InElastic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_elastic(t, parent):
+def ease_out_elastic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_elastic</b>(  <i> t </i>)</p>
+    <p><b>ease_out_elastic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -669,19 +669,19 @@ def out_elastic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_elastic</b>( 0.25 )  &rarr; 1.00552…</li>
-      <li><b>out_elastic</b>( 0.5 )  &rarr; 1.00552…</li>
-      <li><b>out_elastic</b>( 0.75 )  &rarr; 1.00552…</li>
+      <li><b>ease_out_elastic</b>( 0.25 )  &rarr; 0.91161…</li>
+      <li><b>ease_out_elastic</b>( 0.5 )  &rarr; 1.01562…</li>
+      <li><b>ease_out_elastic</b>( 0.75 )  &rarr; 1.00552…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutElastic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_elastic(t, parent):
+def ease_in_out_elastic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_elastic</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_elastic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -690,19 +690,19 @@ def in_out_elastic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_elastic</b>( 0.25 )  &rarr; 1.00781…</li>
-      <li><b>in_out_elastic</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_elastic</b>( 0.75 )  &rarr; 1.00781…</li>
+      <li><b>ease_in_out_elastic</b>( 0.25 )  &rarr; -0.00781…</li>
+      <li><b>ease_in_out_elastic</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_elastic</b>( 0.75 )  &rarr; 1.00781…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutElastic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_elastic(t, parent):
+def ease_out_in_elastic(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_elastic</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_elastic</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -711,19 +711,19 @@ def out_in_elastic(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_elastic</b>( 0.25 )  &rarr; 0.46875…</li>
-      <li><b>out_in_elastic</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_elastic</b>( 0.75 )  &rarr; 0.46875</li>
+      <li><b>ease_out_in_elastic</b>( 0.25 )  &rarr; 0.48438…</li>
+      <li><b>ease_out_in_elastic</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_elastic</b>( 0.75 )  &rarr; 0.46875</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInElastic)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_back(t, parent):
+def ease_in_back(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_back</b>(  <i> t </i>)</p>
+    <p><b>ease_in_back</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -732,19 +732,19 @@ def in_back(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_back</b>( 0.25 )  &rarr; 0.18259…</li>
-      <li><b>in_back</b>( 0.5 )  &rarr; 0.18259…</li>
-      <li><b>in_back</b>( 0.75 )  &rarr; 0.18259…</li>
+      <li><b>ease_in_back</b>( 0.25 )  &rarr; -0.06414…</li>
+      <li><b>ease_in_back</b>( 0.5 )  &rarr; -0.0877…</li>
+      <li><b>ease_in_back</b>( 0.75 )  &rarr; 0.18259…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InBack)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_back(t, parent):
+def ease_out_back(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_back</b>(  <i> t </i>)</p>
+    <p><b>ease_out_back</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -753,19 +753,19 @@ def out_back(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_back</b>( 0.25 )  &rarr; 1.06414…</li>
-      <li><b>out_back</b>( 0.5 )  &rarr; 1.06414…</li>
-      <li><b>out_back</b>( 0.75 )  &rarr; 1.06414…</li>
+      <li><b>ease_out_back</b>( 0.25 )  &rarr; 0.81741…</li>
+      <li><b>ease_out_back</b>( 0.5 )  &rarr; 1.0877…</li>
+      <li><b>ease_out_back</b>( 0.75 )  &rarr; 1.06414…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutBack)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_back(t, parent):
+def ease_in_out_back(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_back</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_back</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -774,19 +774,19 @@ def in_out_back(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_back</b>( 0.25 )  &rarr; 1.09968…</li>
-      <li><b>in_out_back</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_back</b>( 0.75 )  &rarr; 1.09968…</li>
+      <li><b>ease_in_out_back</b>( 0.25 )  &rarr; -0.09968…</li>
+      <li><b>ease_in_out_back</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_back</b>( 0.75 )  &rarr; 1.09968…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutBack)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_back(t, parent):
+def ease_out_in_back(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_back</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_back</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -795,19 +795,19 @@ def out_in_back(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_back</b>( 0.25 )  &rarr; 0.45615…</li>
-      <li><b>out_in_back</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_back</b>( 0.75 )  &rarr; 0.45615…</li>
+      <li><b>ease_out_in_back</b>( 0.25 )  &rarr; 0.54385…</li>
+      <li><b>ease_out_in_back</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_back</b>( 0.75 )  &rarr; 0.45615…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInBack)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_bounce(t, parent):
+def ease_in_bounce(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_bounce</b>(  <i> t </i>)</p>
+    <p><b>ease_in_bounce</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -816,19 +816,19 @@ def in_bounce(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_bounce</b>( 0.25 )  &rarr; 0.52734…</li>
-      <li><b>in_bounce</b>( 0.5 )  &rarr; 0.52734…</li>
-      <li><b>in_bounce</b>( 0.75 )  &rarr; 0.52734…</li>
+      <li><b>ease_in_bounce</b>( 0.25 )  &rarr; 0.02734…</li>
+      <li><b>ease_in_bounce</b>( 0.5 )  &rarr; 0.23438…</li>
+      <li><b>ease_in_bounce</b>( 0.75 )  &rarr; 0.52734…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InBounce)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_bounce(t, parent):
+def ease_out_bounce(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_bounce</b>(  <i> t </i>)</p>
+    <p><b>ease_out_bounce</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -837,19 +837,19 @@ def out_bounce(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_bounce</b>( 0.25 )  &rarr; 0.97266…</li>
-      <li><b>out_bounce</b>( 0.5 )  &rarr; 0.97266…</li>
-      <li><b>out_bounce</b>( 0.75 )  &rarr; 0.97266…</li>
+      <li><b>ease_out_bounce</b>( 0.25 )  &rarr; 0.47266…</li>
+      <li><b>ease_out_bounce</b>( 0.5 )  &rarr; 0.76562…</li>
+      <li><b>ease_out_bounce</b>( 0.75 )  &rarr; 0.97266…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutBounce)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def in_out_bounce(t, parent):
+def ease_in_out_bounce(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>in_out_bounce</b>(  <i> t </i>)</p>
+    <p><b>ease_in_out_bounce</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -858,19 +858,19 @@ def in_out_bounce(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>in_out_bounce</b>( 0.25 )  &rarr; 0.88281…</li>
-      <li><b>in_out_bounce</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>in_out_bounce</b>( 0.75 )  &rarr; 0.88281…</li>
+      <li><b>ease_in_out_bounce</b>( 0.25 )  &rarr; 0.11719…</li>
+      <li><b>ease_in_out_bounce</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_in_out_bounce</b>( 0.75 )  &rarr; 0.88281…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.InOutBounce)
     return easing.valueForProgress(t)
 
 @qgsfunction(group="Animation", referenced_columns=[])
-def out_in_bounce(t, parent):
+def ease_out_in_bounce(t, parent):
     """
     <h4>Syntax</h4>
-    <p><b>out_in_bounce</b>(  <i> t </i>)</p>
+    <p><b>ease_out_in_bounce</b>(  <i> t </i>)</p>
 
     <h4>Arguments</h4>
     <p><i>t</i>: a float representing the progress of the animation (0 to 1)</p>
@@ -879,9 +879,9 @@ def out_in_bounce(t, parent):
     
     <h4>Example usage</h4>
     <ul>
-      <li><b>out_in_bounce</b>( 0.25 )  &rarr; 0.73438…</li>
-      <li><b>out_in_bounce</b>( 0.5 )  &rarr; 0.5</li>
-      <li><b>out_in_bounce</b>( 0.75 )  &rarr; 0.73438…</li>
+      <li><b>ease_out_in_bounce</b>( 0.25 )  &rarr; 0.26562…</li>
+      <li><b>ease_out_in_bounce</b>( 0.5 )  &rarr; 0.5</li>
+      <li><b>ease_out_in_bounce</b>( 0.75 )  &rarr; 0.73438…</li>
     </ul>
     """
     easing = QEasingCurve(QEasingCurve.Type.OutInBounce)
