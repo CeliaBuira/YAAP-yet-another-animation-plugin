@@ -5,51 +5,53 @@ from qgis.PyQt.QtCore import QEasingCurve
 from qgis.utils import qgsfunction
 
 registered_easing_functions = {
-    'ease_in_quad'
-    'ease_out_quad'
-    'ease_in_out_quad'
-    'ease_out_in_quad'
-    'ease_in_cubic'
-    'ease_out_cubic'
-    'ease_in_out_cubic'
-    'ease_out_in_cubic'
-    'ease_in_quart'
-    'ease_out_quart'
-    'ease_in_out_quart'
-    'ease_out_in_quart'
-    'ease_in_quint'
-    'ease_out_quint'
-    'ease_in_out_quint'
-    'ease_out_in_quint'
-    'ease_in_sine'
-    'ease_out_sine'
-    'ease_in_out_sine'
-    'ease_out_in_sine'
-    'ease_in_expo'
-    'ease_out_expo'
-    'ease_in_out_expo'
-    'ease_out_in_expo'
-    'ease_in_circ'
-    'ease_out_circ'
-    'ease_in_out_circ'
-    'ease_out_in_circ'
-    'ease_in_elastic'
-    'ease_out_elastic'
-    'ease_in_out_elastic'
-    'ease_out_in_elastic'
-    'ease_in_back'
-    'ease_out_back'
-    'ease_in_out_back'
-    'ease_out_in_back'
-    'ease_in_bounce'
-    'ease_out_bounce'
-    'ease_in_out_bounce'
-    'ease_out_in_bounce'
+    'ease_in_quad',
+    'ease_out_quad',
+    'ease_in_out_quad',
+    'ease_out_in_quad',
+    'ease_in_cubic',
+    'ease_out_cubic',
+    'ease_in_out_cubic',
+    'ease_out_in_cubic',
+    'ease_in_quart',
+    'ease_out_quart',
+    'ease_in_out_quart',
+    'ease_out_in_quart',
+    'ease_in_quint',
+    'ease_out_quint',
+    'ease_in_out_quint',
+    'ease_out_in_quint',
+    'ease_in_sine',
+    'ease_out_sine',
+    'ease_in_out_sine',
+    'ease_out_in_sine',
+    'ease_in_expo',
+    'ease_out_expo',
+    'ease_in_out_expo',
+    'ease_out_in_expo',
+    'ease_in_circ',
+    'ease_out_circ',
+    'ease_in_out_circ',
+    'ease_out_in_circ',
+    'ease_in_elastic',
+    'ease_out_elastic',
+    'ease_in_out_elastic',
+    'ease_out_in_elastic',
+    'ease_in_back',
+    'ease_out_back',
+    'ease_in_out_back',
+    'ease_out_in_back',
+    'ease_in_bounce',
+    'ease_out_bounce',
+    'ease_in_out_bounce',
+    'ease_out_in_bounce',
 }
 
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_quad(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InQuad </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_quad</b>(  <i> t </i>)</p>
 
@@ -71,6 +73,8 @@ def ease_in_quad(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_quad(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutQuad </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_quad</b>(  <i> t </i>)</p>
 
@@ -92,6 +96,8 @@ def ease_out_quad(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_quad(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutQuad </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_quad</b>(  <i> t </i>)</p>
 
@@ -113,6 +119,8 @@ def ease_in_out_quad(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_quad(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInQuad </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_quad</b>(  <i> t </i>)</p>
 
@@ -134,6 +142,8 @@ def ease_out_in_quad(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_cubic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InCubic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_cubic</b>(  <i> t </i>)</p>
 
@@ -155,6 +165,8 @@ def ease_in_cubic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_cubic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutCubic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_cubic</b>(  <i> t </i>)</p>
 
@@ -176,6 +188,8 @@ def ease_out_cubic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_cubic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutCubic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_cubic</b>(  <i> t </i>)</p>
 
@@ -197,6 +211,8 @@ def ease_in_out_cubic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_cubic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInCubic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_cubic</b>(  <i> t </i>)</p>
 
@@ -218,6 +234,8 @@ def ease_out_in_cubic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_quart(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InQuart </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_quart</b>(  <i> t </i>)</p>
 
@@ -239,6 +257,8 @@ def ease_in_quart(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_quart(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutQuart </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_quart</b>(  <i> t </i>)</p>
 
@@ -260,6 +280,8 @@ def ease_out_quart(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_quart(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutQuart </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_quart</b>(  <i> t </i>)</p>
 
@@ -281,6 +303,8 @@ def ease_in_out_quart(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_quart(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInQuart </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_quart</b>(  <i> t </i>)</p>
 
@@ -302,6 +326,8 @@ def ease_out_in_quart(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_quint(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InQuint </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_quint</b>(  <i> t </i>)</p>
 
@@ -323,6 +349,8 @@ def ease_in_quint(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_quint(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutQuint </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_quint</b>(  <i> t </i>)</p>
 
@@ -344,6 +372,8 @@ def ease_out_quint(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_quint(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutQuint </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_quint</b>(  <i> t </i>)</p>
 
@@ -365,6 +395,8 @@ def ease_in_out_quint(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_quint(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInQuint </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_quint</b>(  <i> t </i>)</p>
 
@@ -386,6 +418,8 @@ def ease_out_in_quint(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_sine(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InSine </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_sine</b>(  <i> t </i>)</p>
 
@@ -407,6 +441,8 @@ def ease_in_sine(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_sine(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutSine </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_sine</b>(  <i> t </i>)</p>
 
@@ -428,6 +464,8 @@ def ease_out_sine(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_sine(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutSine </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_sine</b>(  <i> t </i>)</p>
 
@@ -449,6 +487,8 @@ def ease_in_out_sine(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_sine(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInSine </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_sine</b>(  <i> t </i>)</p>
 
@@ -470,6 +510,8 @@ def ease_out_in_sine(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_expo(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InExpo </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_expo</b>(  <i> t </i>)</p>
 
@@ -491,6 +533,8 @@ def ease_in_expo(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_expo(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutExpo </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_expo</b>(  <i> t </i>)</p>
 
@@ -512,6 +556,8 @@ def ease_out_expo(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_expo(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutExpo </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_expo</b>(  <i> t </i>)</p>
 
@@ -533,6 +579,8 @@ def ease_in_out_expo(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_expo(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInExpo </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_expo</b>(  <i> t </i>)</p>
 
@@ -554,6 +602,8 @@ def ease_out_in_expo(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_circ(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InCirc </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_circ</b>(  <i> t </i>)</p>
 
@@ -575,6 +625,8 @@ def ease_in_circ(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_circ(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutCirc </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_circ</b>(  <i> t </i>)</p>
 
@@ -596,6 +648,8 @@ def ease_out_circ(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_circ(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutCirc </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_circ</b>(  <i> t </i>)</p>
 
@@ -617,6 +671,8 @@ def ease_in_out_circ(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_circ(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInCirc </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_circ</b>(  <i> t </i>)</p>
 
@@ -638,6 +694,8 @@ def ease_out_in_circ(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_elastic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InElastic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_elastic</b>(  <i> t </i>)</p>
 
@@ -659,6 +717,8 @@ def ease_in_elastic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_elastic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutElastic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_elastic</b>(  <i> t </i>)</p>
 
@@ -680,6 +740,8 @@ def ease_out_elastic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_elastic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutElastic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_elastic</b>(  <i> t </i>)</p>
 
@@ -701,6 +763,8 @@ def ease_in_out_elastic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_elastic(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInElastic </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_elastic</b>(  <i> t </i>)</p>
 
@@ -722,6 +786,8 @@ def ease_out_in_elastic(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_back(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InBack </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_back</b>(  <i> t </i>)</p>
 
@@ -743,6 +809,8 @@ def ease_in_back(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_back(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutBack </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_back</b>(  <i> t </i>)</p>
 
@@ -764,6 +832,8 @@ def ease_out_back(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_back(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutBack </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_back</b>(  <i> t </i>)</p>
 
@@ -785,6 +855,8 @@ def ease_in_out_back(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_back(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInBack </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_back</b>(  <i> t </i>)</p>
 
@@ -806,6 +878,8 @@ def ease_out_in_back(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_bounce(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InBounce </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_bounce</b>(  <i> t </i>)</p>
 
@@ -827,6 +901,8 @@ def ease_in_bounce(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_bounce(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutBounce </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_bounce</b>(  <i> t </i>)</p>
 
@@ -848,6 +924,8 @@ def ease_out_bounce(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_in_out_bounce(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::InOutBounce </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_in_out_bounce</b>(  <i> t </i>)</p>
 
@@ -869,6 +947,8 @@ def ease_in_out_bounce(t, parent):
 @qgsfunction(group="Animation", referenced_columns=[])
 def ease_out_in_bounce(t, parent):
     """
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::OutInBounce </a>.  </p>
     <h4>Syntax</h4>
     <p><b>ease_out_in_bounce</b>(  <i> t </i>)</p>
 

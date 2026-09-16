@@ -165,6 +165,8 @@ def svg_for_curve(easing_curve_type):
 template = """@qgsfunction(group="Animation", referenced_columns=[])
 def {name}(t, parent):
     \"""
+    
+    <p> See the documentation for the matching curve in Qt's QEasingCurve: <a href="https://doc.qt.io/qt-6/qeasingcurve.html#Type-enum"> QEasingCurve::{v} </a>.  </p>
     <h4>Syntax</h4>
     <p><b>{name}</b>(  <i> t </i>)</p>
 
@@ -210,7 +212,7 @@ with open(target_file, "w+") as f:
     f.write("registered_easing_functions = {\n")
     for k, v in mapping.items():
         
-        f.write(f"    'ease_{capitalized2snakecase(v)}'\n")
+        f.write(f"    'ease_{capitalized2snakecase(v)}',\n")
     f.write("}\n\n")
 
     for k, v in mapping.items():
@@ -245,6 +247,7 @@ with open(target_file, "w+") as f:
         
         func_expression_formated = template.format(name=name,
                                qt_name=qt_name,
+                               v=v,
                             #    img_src=curve_png_path,
                                res_25=round_result(easing.valueForProgress(0.25)),
                                res_50=round_result(easing.valueForProgress(0.5)),
