@@ -26,7 +26,7 @@ changelog=<p>1.0.0
     * ease_out functions e.g: ease_out_quad, ease_out_cubic etc...
     * ease_out_in functions e.g: ease_out_in_quad, ease_out_in_cubic etc...
   
-qgisMinimumVersion=3.22
+qgisMinimumVersion=3.40
 qgisMaximumVersion=4.99
 author=Celia Buira
 email=celia.buira@gmail.com
