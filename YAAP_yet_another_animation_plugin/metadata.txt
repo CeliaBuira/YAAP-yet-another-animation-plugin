@@ -1,8 +1,31 @@
 [general]
 name=YAAP(Yet Another Animation Plugin)
-description=Minimal plugin
-about=About this minimal plugin
+description=Turn QGIS into a video editing software
+about=YAAP(Yet Another Animation Plugin) is a QGIS plugin that expand the capabilities of the temporal controller and the expression engine to create beautiful animation in QGIS.
+
+    Enhances your methodologies with animations, make data visualisation, educational video, or even art with it  
+
+    This plugin was created while creating these videos:
+    * https://lnkd.in/p/eJGA25DA
+    * https://youtu.be/VqZFsCQ5UJ4
+    * https://youtu.be/R6kVB-uChUg 
+
+    Introduction to animation in QGIS presented at Laax user conference: https://talks.osgeo.org/qgis-uc2026/talk/MNDQQH/
+
+
 version=1.0.0
+changelog=<p>1.0.0
+  Initial release adds all expression function to turn qgis into a small "video editor" including:
+    * lerp
+    * lerp_unclamped    
+    * inverse_lerp   
+    * inverse_lerp_unclamped   
+    * remap
+    * ease_in functions e.g: ease_in_quad, ease_in_cubic etc...
+    * ease_in_out functions e.g: ease_in_out_quad, ease_in_out_cubic etc...
+    * ease_out functions e.g: ease_out_quad, ease_out_cubic etc...
+    * ease_out_in functions e.g: ease_out_in_quad, ease_out_in_cubic etc...
+  
 qgisMinimumVersion=3.22
 qgisMaximumVersion=4.99
 author=Celia Buira
