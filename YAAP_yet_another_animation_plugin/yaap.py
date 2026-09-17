@@ -9,10 +9,13 @@
 # (at your option) any later version.
 #---------------------------------------------------------------------
 
+import os
+
 from qgis.core import QgsExpression, qgsfunction, QgsGeometry, QgsPointXY
 
 from qgis.PyQt.QtWidgets import QAction, QMessageBox
-from qgis.PyQt.QtGui import QVector2D
+from qgis.PyQt.QtGui import QDesktopServices, QVector2D, QIcon
+from qgis.PyQt.QtCore import QUrl
 
 from statistics import mean
 
@@ -191,20 +194,45 @@ def to_circle(geometry: QgsGeometry, t: float=1, goal:float=None):
 class YAAPPlugin:
     def __init__(self, iface):
         self.iface = iface
+        self.base_dir = os.path.dirname(__file__)
+        self.plugin_icon = QIcon(os.path.join(self.base_dir, "icon.png"))
+
+        self.menu = "&YAAP(Yet Another Animation Plugin)"
 
     def initGui(self):
-        self.action = QAction('Go!', self.iface.mainWindow())
+        self.action = QAction('How to use', self.iface.mainWindow())
+        self.action.setIcon(self.plugin_icon)
         self.action.triggered.connect(self.run)
-        self.iface.addToolBarIcon(self.action)
+        # self.iface.addToolBarIcon(self.action)
+        self.iface.addPluginToMenu(self.menu, self.action)
+
+        self.get_menu_action().setIcon(
+            self.plugin_icon
+        )
 
     def unload(self):
-        self.iface.removeToolBarIcon(self.action)
+        # self.iface.removeToolBarIcon(self.action)
+        self.iface.removePluginMenu(self.menu, self.action)
         del self.action
 
         self.unloadExpressions()
 
+    def get_menu_action(self):
+        actions = self.iface.pluginMenu().actions()
+        result_actions = [action for action in actions if action.text() == self.menu]
+
+        # OSX does not support & in the menu title
+        if not result_actions:
+            result_actions = [
+                action
+                for action in actions
+                if action.text() == self.menu.replace("&", "")
+            ]
+
+        return result_actions[0]
+
     def run(self):
-        QMessageBox.information(None, 'Minimal plugin', 'Do something useful here')
+        QDesktopServices.openUrl(QUrl("https://github.com/CeliaBuira/YAAP-yet-another-animation-plugin#how-to-use"))
 
     def initExpressions(self):
         """Already registered via the decorator @qgsfunction, but I like to have a symmetry with unloadExpressions"""
