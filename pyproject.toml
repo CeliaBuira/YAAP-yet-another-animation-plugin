@@ -1,0 +1,4 @@
+[tool.qgis-plugin-ci]
+plugin_path = "YAAP_yet_another_animation_plugin"
+github_organization_slug = "CeliaBuira"
+project_slug = "YAAP-yet-another-animation-plugin"

@@ -2,12 +2,14 @@
 name=YAAP(Yet Another Animation Plugin)
 description=Minimal plugin
 about=About this minimal plugin
-version=1.0
-qgisMinimumVersion=3.16
+version=1.0.0
+qgisMinimumVersion=3.22
 qgisMaximumVersion=4.99
 author=Celia Buira
 email=celia.buira@gmail.com
-repository=URL to the code repository
+repository=https://github.com/CeliaBuira/YAAP-yet-another-animation-plugin
+homepage=https://github.com/CeliaBuira/YAAP-yet-another-animation-plugin
+tracker=https://github.com/CeliaBuira/YAAP-yet-another-animation-plugin/issues
 supportsQt6=True
 
 icon=icon.png
