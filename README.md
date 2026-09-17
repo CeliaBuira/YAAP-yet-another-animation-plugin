@@ -1,28 +1,75 @@
-# QGIS Minimalist Plugin Skeleton
+# YAAP (Yet Another Animation Plugin)
 
-In various QGIS plugin tutorials you are told to use _Plugin Builder_ tool to create a skeleton for your plugin.
-It is surely helpful as it helps you kickstart your plugin with stuff like UI designer file, auto tests, docs, i18n, scripts and so on.
+YAAP(Yet Another Animation Plugin) is a QGIS plugin that expand the capabilities of the temporal controller and the expression engine to create beautiful animation in QGIS.
 
-This QGIS plugin is the complete opposite of a plugin built with _Plugin Builder_: it is a plugin skeleton cut down
-to the bare minimum that still results in a valid QGIS plugin. It consists of two files only: a text file with metadata and a Python file with a bit of code.
+Enhances your methodologies with animations, make data visualisation, educational video, or even art with it  
 
-## Why?
+This plugin was created while creating these videos:
+* https://lnkd.in/p/eJGA25DA
+* https://youtu.be/VqZFsCQ5UJ4
+* https://youtu.be/R6kVB-uChUg 
 
-For educational purposes, it is useful to understand how a very basic plugin could look like.
+Introduction to animation in QGIS presented at Laax user conference: https://talks.osgeo.org/qgis-uc2026/talk/MNDQQH/
 
-For practical reasons, it is sometimes useful to create a single purpose plugin with the least amount of extra bells and whistles,
-so the code that actually does something is not hidden among generated boilerplate code.
 
-## How to use it?
 
-1. Create a new python plugin directory
-  * e.g. Linux ```~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/minimal```
-  * e.g. Windows ```C:\Users\USER\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\minimal```
-  * e.g. macOS ```~/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/minimal```
-2. Copy ```metadata.txt``` and ```__init__.py``` to that directory
-3. Start QGIS and enable the plugin (menu Plugins > Manager and Install Plugins...)
+## How to use
 
-Now you should see a "Go!" button in your "Plugins" toolbar (make sure it is enabled in menu Settings > Toolbars > Plugins).
+The expressions functions of plugin are all located in the field calculator window under the "Animation" category
 
-The next step is to change the metadata (e.g. plugin title and description) in ```metadata.txt``` and
-start adding your own code to ```__init__.py```. Have fun!
+
+![Screenshot of where the expression functions are added in the field calculator](./illlustration.png)
+
+
+### Reference 
+
+This section give an overview of the functions in the plugin. For a more complete explanation how they work please refer to the "in-line" documentation direclty inside QGIS. 
+        
+#### lerp
+
+exemple usage : `lerp( 0, 100, 0.25 ) -> 25` 
+
+#### lerp_unclamped
+
+exemple usage : `lerp_unclamped( 0, 100, 0.25 ) -> 25` 
+        
+#### inverse_lerp
+
+exemple usage : `inverse_lerp( 0, 100, 25 ) -> 0.25` 
+        
+#### inverse_lerp_unclamped
+
+exemple usage : `lerp_unclamped( 0, 100, 1.2 ) -> 120 ` 
+        
+#### remap
+
+exemple usage : `remap( 2, 0, 10, 0, 100 ) -> 20` 
+
+#### ease_in_*
+
+exemple usage : `ease_in_quad( 0.25 )` 
+
+#### ease_in_out_*
+
+exemple usage : `ease_in_out_quad( 0.25 )5` 
+
+#### ease_out_* e.g: 
+
+exemple usage : `ease_out_quad( 0.25 )` 
+
+#### ease_out_in_*
+
+exemple usage : `ease_out_in_quad( 0.25 )` 
+
+## How to contribute 
+
+### Obtain the source code 
+
+Git clone this repository or git clone your fork
+
+### Create a link from the QGIS profiles folder to the plugin folder `./YAAP_yet_another_animation_plugin`
+
+e.g on Windows it looks like that, replace "Celia" with the appropriate directory on your machine
+```
+mklink /J C:\Users\Celia\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\YAAP_yet_another_animation_plugin C:\Users\Celia\Documents\YAAP-yet-another-animation-plugin\YAAP_yet_another_animation_plugin
+```
