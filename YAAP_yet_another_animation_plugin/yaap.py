@@ -150,7 +150,7 @@ def remap(value, start1, stop1, start2, stop2, unclamped=False):
         t = easing.inverse_lerp(start1, stop1, value)
     return start2 + (stop2 - start2) * t
 
-@qgsfunction(group='Custom', referenced_columns=[])
+@qgsfunction(group='Animation', referenced_columns=[])
 def to_circle(geometry: QgsGeometry, t: float=1, goal:float=None):
     """
     Transforms the geometry into a circular shape by adjusting the vertices' distances from the centroid.
